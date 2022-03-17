@@ -74,7 +74,7 @@
 ### 图案区域和原点
 - 在使用图形时
     - 拖动并调整图案周围训练框的大小
-    - 在适当的位置上定位原点
+    - 在适当的位置上定位原点  
     [img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200105.png)  
     - 下一步，定义包含要训练的图案的像素区域和图案原点
         - 使用图形或者在训练区域和原点标签中输入值  
@@ -82,12 +82,12 @@
     - 模型原点
         - 在PatMax®定位搜索场景中模型的实例时，模型原点可以辨别要向您报告的点
         - 要维持最高的精确度，原点必须放置图案区域的重心
-        [img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200529.png)  
+        [![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200529.png) ] 
     - 训练图案
         - 按下训练按钮训练团，PatMax会找到区域中的特征
         [img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200657.png)  
     - 图案特征
-        - 要看看PatMax使用该图案已经探测到什么作为要查找特征，需要勾选训练特征图形
+        - 要看看PatMax使用该图案已经探测到什么作为要查找特征，需要勾选训练特征图形  
         [img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200849.png)  
         - 黄线表示粗糙特征
         - 绿线表示精细特征  
