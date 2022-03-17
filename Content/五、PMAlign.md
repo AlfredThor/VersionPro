@@ -73,36 +73,154 @@
     - 实际上，分界点越多，精确度越高
 ### 图案区域和原点
 - 在使用图形时
-    - 拖动并调整图案周围训练框的大小
-    - 在适当的位置上定位原点  
-    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200105.png)  
-    - 下一步，定义包含要训练的图案的像素区域和图案原点
-        - 使用图形或者在训练区域和原点标签中输入值  
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200308.png)  
-    - 模型原点
-        - 在PatMax®定位搜索场景中模型的实例时，模型原点可以辨别要向您报告的点
-        - 要维持最高的精确度，原点必须放置图案区域的重心
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200529.png) 
-    - 训练图案
-        - 按下训练按钮训练团，PatMax会找到区域中的特征
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200657.png)  
-    - 图案特征
-        - 要看看PatMax使用该图案已经探测到什么作为要查找特征，需要勾选训练特征图形  
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200849.png)  
-        - 黄线表示粗糙特征
-        - 绿线表示精细特征  
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316201104.png)
-        - 放大以便更近距离的查看所探测到的特征  
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316201316.png)
-    - **InfoStrings**
-        - 寻找任何**InfoStrings**
-            - 这些将表示图案训练是否成功
-            - 它们还警告受训图案可能存在的各种问题
-    - 图案极性
-        - 默认状态下，PatMax®只查找与受训团具有相同极性的图案
-        - 可以配置PatMax®忽略图案的极性并且只使用特征形状信息
-        - 勾选复选框忽略极性（允许极性变化）    
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316201907.png)
-        - 极性是对PatMax®的一个提示，可以使得图案更明确些，应该使用极性，除非对象受极性变化的影响。  
-        ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316202126.png)
-        
+- 拖动并调整图案周围训练框的大小
+- 在适当的位置上定位原点  
+![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200105.png)  
+- 下一步，定义包含要训练的图案的像素区域和图案原点
+- 使用图形或者在训练区域和原点标签中输入值  
+![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200308.png)  
+- 模型原点
+    - 在PatMax®定位搜索场景中模型的实例时，模型原点可以辨别要向您报告的点
+    - 要维持最高的精确度，原点必须放置图案区域的重心  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200529.png) 
+- 训练图案
+    - 按下训练按钮训练团，PatMax会找到区域中的特征  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200657.png)  
+- 图案特征
+    - 要看看PatMax使用该图案已经探测到什么作为要查找特征，需要勾选训练特征图形  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316200849.png)  
+    - 黄线表示粗糙特征
+    - 绿线表示精细特征  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316201104.png)
+    - 放大以便更近距离的查看所探测到的特征  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316201316.png)
+- **InfoStrings**
+    - 寻找任何**InfoStrings**
+        - 这些将表示图案训练是否成功
+        - 它们还警告受训图案可能存在的各种问题
+- 图案极性
+    - 默认状态下，PatMax®只查找与受训团具有相同极性的图案
+    - 可以配置PatMax®忽略图案的极性并且只使用特征形状信息
+    - 勾选复选框忽略极性（允许极性变化）    
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316201907.png)
+    - 极性是对PatMax®的一个提示，可以使得图案更明确些，应该使用极性，除非对象受极性变化的影响。  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220316202126.png)
+- 弹性
+    - 弹性是一个高级参数，在查找与原来的受训图案存在一些几何形状变化的元件时很有用途  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317083307.png)
+    - 弹性是一个运行期间参数，用来指定您允许PatMax®忍受非线性几何形状变化程度
+    - 弹性以像素为单位进行测量，通常为0到8
+    - 在提高弹性时，PatMax®可能找到非预期的匹配-精确降低
+- 颗粒度
+    - 颗粒度表示PatMax®在图像中探测到那些特征大小
+    - 在多数情况下PatMax®为您选择的颗粒度范围是最佳的
+    - 颗粒度被描述为探测到目的特征的半径，以像素表示
+    - 增加颗粒度会减少PatMax®将使用的精细特征的数量
+- 颗粒度限制
+    - PatMax®使用精细和粗糙限制之间的精度范围
+    - 是的粒度更粗糙（数值更高）：
+        - 提高速度
+        - 降低精确度
+        - 探测粗糙并且减弱精细特征（可能是好的也可能是坏的）
+    - 使得粒度更精细（数值更低）：
+        - 降低速度
+        - 提高线性精确度
+        - 探测精细并且减弱粗糙特征（可能是好的也可能是坏的）
+- 人工建模
+    - 也可以使用形状模型训练PMAlign模型
+    - 在找不到整体特征质量好的训练元件的应用场合中使用  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317085159.png)
+- 人工模型编辑器
+    - 模型编辑器允许您使用图像作为向导自动提取形状或者绘制您自己的形状  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317085348.png)
+- 运行期间  
+![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317085504.png)
+- 运行期间参数
+    - 选择运行期间算法
+    - 然后规定在运行期间图像中要找到的实例数量
+    - 指定接受阀值  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317090113.png)
+- 接受阀值
+    - 接受阀值是PatMax®用来确定搜索图形中有效模型的一个分支（介于0和1.0之间），提高接近值会减少搜索所需要的时间
+- 六种自由度
+    - 如果使用多种自由角度，比例也一直应用在第一位  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317090651.png)
+- 自由度
+    - 设置标称值或者值的范围
+    - 使用箭头在使用的值之间切换
+    - 另外切换角度
+    - 比例X和比例Y均为高级参数  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317093312.png)
+    - 记住：告诉 PatMax® 您了解元件的哪些内容,不要激活您的应用程序不需要的自由度
+    - 标称值应该设置为已知元件所有的值
+    - 如果以不同大小的图像做为训练图案，则设置锁定比例的数值以反映图像的比例  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317093935.png)
+    - 每个自由度都会有一个从低到高的值域
+    - 可以激活多个自由度 
+    - 多个自由度可能会造成无意的匹配
+    - 在三刻度自由度中,最多只能激活两个,第三个会是多余的
+- 搜素区域
+    - 默认状态，PatMax搜索整个图像寻找可能的匹配
+    - 要让PatMax只在图像的一个部分中查找，使用一个区域形状（**RegionShape**）
+    - 通过键入值或者使用图形设置大小和位置  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317105604.png)
+- 图形
+    - 最后，选择在运行期间需要显示的图像，记住图形的更新需要时间  
+    ![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317110251.png)
+### 运行PatMax
+- 按下运行按钮在当前输入图像上运行PatMax
+- 如果查找到一个实例，指定图形会出现在最后运行的输入图像上  
+![img](https://github.com/Hellathor/VersionPro/blob/main/img/20220317111003.png)
+### 结果
+- 结构显示在结果标签的下面
+- 如果找到多个实例，它们将按得分降序排列返回
+### PatMax得分
+- 得分范围从0（不匹配）到1.0（完全匹配）
+- 亮度、对比度和极性不影响得分。它们只可能影响图案是否探测得到。
+- 在计分中需要考虑的因素包括：
+    - 图案形状适合度
+    - 在自由度范围内的适合
+    - 遗失特征
+    - 无关特征（**只限于ParMax®算法**）
+### 结果
+- 得分：结果特征与训练图案特征的匹配程度是多少
+- X、Y：所找到的图案相对于指定原点的位置
+- 角度：所找到的图案相对于原来训练的图案的角度
+- 匹配错误（**只限PatMax算法**）：训练图案的形状和在搜索图像中找到的图案实例形状之间差异度
+- 覆盖（**只限PatMax算法**）：训练图案的所有部分也在搜索图像中存在程度
+- 杂乱（**只限PatMax算法**）：找到的对象中包含有训练图案中没有的特征程度
+- 比例：所找到的图案的大小与原始训练团的对比、锁定比例
+- 比例X、比例Y：所找到的图案的大小与原始训练图案沿X轴和Y轴方向的对比
+### 如何使得PatMax®更快
+- 控制您能控制的并且告诉PatMax您所知道的
+- 了解哪些参数影响执行时间
+### 参数和执行时间
+- 搜索体积越大，执行时间可能越长：宽 * 高 * 角度数值 * 大小数值
+- 减小接受阀值强迫更多的探索
+- 加大所要求的结果的数量使得执行时间稍长
+- 减小精细力度数值增加时间（**更高细节需要剖析**）
+- 提高粗糙力度数值减少时间（**但是确保探测到必要的特征**）
+- 考虑极性稍微提高速度
+- 设置对比阀值>0.0，便于更快的执行
+### 运行精确度指南
+- 从不要求PatMax®解决您已经知道或者应该知道的
+- 倾向于“考虑极性”
+- 倾向于弹性非常接近于0.0
+- 倾向于标准的默认设置
+- 如果您需要修改默认设置，根据对象变化的世纪预期设置他们
+### 高精确度指南
+***对象外观***
+- 对象在相对几何形状上必须一致
+- 对象在相对外观上必须一致
+- 对象特征必须明显的界定
+***演示和照明***
+- 最小化镜面反射、阴影、非线性变化、遮挡、不均匀对比度变化
+***相机***
+-使用高质量镜头将畸变最小化
+- 坚持视场的中间
+- 细心的对焦
+- 调整光圈避免饱和
+- 根据系统校准相机
+***越大的图像越精确***
+***确保精细粒度为1.0***
+- 如果自动选择更大的值，会受到警告
